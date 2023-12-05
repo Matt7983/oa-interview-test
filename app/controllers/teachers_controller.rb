@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class TeachersController < ApplicationController
+  protect_from_forgery with: :null_session
+
   before_action :set_teacher
 
   def follow_student
